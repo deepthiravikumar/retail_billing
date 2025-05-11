@@ -1,0 +1,123 @@
+/* Signup.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: 'Poppins', sans-serif;
+}
+
+.signup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    animation: fadeIn 0.7s ease;
+}
+
+form {
+    background: #ffffff;
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 400px;
+    text-align: center;
+    animation: scaleUp 0.6s ease;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.3rem;
+    text-align: left;
+}
+
+label {
+    font-weight: 600;
+    color: #555;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    transition: border 0.3s ease;
+}
+
+input:focus {
+    border-color: #764ba2;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 0.85rem;
+    background: #667eea;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.15s ease;
+}
+
+button:hover {
+    background: #5a67d8;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+.error-message {
+    background: #ffe0e0;
+    color: #d93025;
+    padding: 0.75rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.login-link {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.login-link span {
+    color: #667eea;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.login-link span:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

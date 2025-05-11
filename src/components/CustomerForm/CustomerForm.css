@@ -1,0 +1,10 @@
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-weight: 500;
+}
