@@ -27,7 +27,7 @@ const Menubar = () => {
             <div className="collapse navbar-collapse p-2" id="navbarNav">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                        <Link className="nav-link" to="/dashboard">Dashboard</Link>
+                        <Link className="nav-link" to="/dashboard">Home</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="/explore">Explore</Link>

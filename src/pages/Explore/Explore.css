@@ -1,6 +1,7 @@
+/* Explore.css */
 .explore-container {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #1a1a2e;
     padding: 20px;
     gap: 20px;
@@ -10,54 +11,88 @@
     flex: 2;
     display: flex;
     flex-direction: column;
-    background-color: #16213e;
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-height: 80vh; /* Minimum height */
 }
 
 .right-column {
     flex: 1;
-    background-color: #16213e;
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.first-row {
-    flex: 1;
-    margin-bottom: 15px;
+    min-height: 80vh;
 }
 
 .second-row {
-    flex: 3;
-}
-
-.horizontal-line {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
-    margin: 10px 0;
+    flex: 1;
+    overflow-y: auto;
+    margin-top: 15px;
 }
 
 .customer-form-container {
     background-color: #0f3460;
     padding: 15px;
     border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.cart-items-container {
-    background-color: #0f3460;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    min-height: 120px; /* Minimum height */
 }
 
 .cart-summary-container {
     background-color: #0f3460;
     padding: 15px;
     border-radius: 8px;
+    margin-bottom: 15px;
+    flex: 1;
+    min-height: 200px;
+}
+
+.cart-items-container {
+    background-color: #0f3460;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 2;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Improved Cart Items styling */
+.cart-items-list {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.cart-item {
+    background-color: #16213e;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* Better spacing for form elements */
+.customer-form-container .form-control {
+    margin-bottom: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .explore-container {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .right-column {
+        margin-top: 20px;
+    }
 }
 
 /* Scrollbar styling */
@@ -77,16 +112,4 @@
 
 ::-webkit-scrollbar-thumb:hover {
     background: #e94560;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .explore-container {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .left-column, .right-column {
-        width: 100%;
-    }
 }

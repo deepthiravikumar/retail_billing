@@ -39,14 +39,14 @@ const Login = () => {
     };
 
     return (
-        <div className="login-page">
-            <div className={`login-container ${isAnimating ? 'shake' : ''} p-2`}>
-                <div className="login-header">
+        <div className="auth-page">
+            <div className={`auth-container ${isAnimating ? 'shake' : ''}`}>
+                <div className="auth-header">
                     <h2>Welcome Back</h2>
                     <p>Please enter your credentials to login</p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="login-form">
+                <form onSubmit={handleSubmit} className="auth-form">
                     {error && (
                         <div className="error-message">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -56,7 +56,7 @@ const Login = () => {
                         </div>
                     )}
 
-                    <div className="form-group">
+                    <div className="form-group floating">
                         <input
                             type="email"
                             name="email"
@@ -64,12 +64,12 @@ const Login = () => {
                             onChange={handleChange}
                             placeholder=" "
                             required
-                            className="login-input"
+                            className="auth-input"
                         />
                         <label>Email Address</label>
                     </div>
 
-                    <div className="form-group">
+                    <div className="form-group floating">
                         <input
                             type="password"
                             name="password"
@@ -77,7 +77,7 @@ const Login = () => {
                             onChange={handleChange}
                             placeholder=" "
                             required
-                            className="login-input"
+                            className="auth-input"
                         />
                         <label>Password</label>
                     </div>
@@ -85,7 +85,7 @@ const Login = () => {
                     <button
                         type="submit"
                         disabled={loading}
-                        className={`login-button ${loading ? 'loading' : ''}`}>
+                        className={`auth-button ${loading ? 'loading' : ''}`}>
                         {loading ? (
                             <>
                                 <span className="spinner"></span>
@@ -96,20 +96,19 @@ const Login = () => {
                         )}
                     </button>
 
-                    <div className="login-footer">
-                        <p className="signup-link">
+                    <div className="auth-footer">
+                        <p className="auth-link">
                             Don't have an account?{' '}
-                            <span onClick={() => navigate('/signup')}>Create one</span>
+                            <span onClick={() => navigate('/signup')}>Sign up</span>
                         </p>
-                        <p className="forgot-password" onClick={() => navigate('/forgot-password')}>
+                        <p className="auth-link" onClick={() => navigate('/forgot-password')}>
                             Forgot password?
                         </p>
                     </div>
                 </form>
             </div>
 
-            {/* Moved inside the page */}
-            <div className="login-decoration">
+            <div className="auth-decoration">
                 <div className="circle circle-1"></div>
                 <div className="circle circle-2"></div>
                 <div className="circle circle-3"></div>

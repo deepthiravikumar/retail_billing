@@ -16,7 +16,7 @@ const CartItems = () => {
                         <div className="cart-item" key={index}>
                             <div className="item-info">
                                 <h6 className="item-name">{item.name}</h6>
-                                <p className="item-price">${(item.price * item.quantity).toFixed(2)}</p>
+                                <p className="item-price">₹{(item.price * item.quantity).toFixed(2)}</p>
                             </div>
                             <div className="item-controls">
                                 <div className="quantity-controls">

@@ -6,7 +6,7 @@ const CartSummary = ({customerName, mobileNumber, setMobileNumber, setCustomerNa
     const {cartItems} = useContext(AppContext);
 
     const subtotal = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
-    const tax = subtotal * 0.1; // 10% tax
+    const tax = subtotal * 0.03; // 3% tax
     const total = subtotal + tax;
 
     const handlePlaceOrder = (paymentMethod) => {
@@ -36,15 +36,15 @@ const CartSummary = ({customerName, mobileNumber, setMobileNumber, setCustomerNa
             <div className="summary-details">
                 <div className="summary-row">
                     <span>Subtotal:</span>
-                    <span>${subtotal.toFixed(2)}</span>
+                    <span>₹{subtotal.toFixed(2)}</span>
                 </div>
                 <div className="summary-row">
-                    <span>Tax (10%):</span>
-                    <span>${tax.toFixed(2)}</span>
+                    <span>Tax (3%):</span>
+                    <span>₹{tax.toFixed(2)}</span>
                 </div>
                 <div className="summary-row total">
                     <span>Total:</span>
-                    <span>${total.toFixed(2)}</span>
+                    <span>₹{total.toFixed(2)}</span>
                 </div>
             </div>
 
